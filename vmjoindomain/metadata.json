@@ -1,9 +1,9 @@
 {
   "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
   "type": "QuickStart",
-  "itemDisplayName": "Create new Vm and join domain",
+  "itemDisplayName": "Create new VM and join domain",
   "description": "This template creates a new virtual machine, and adds it to an existing domain.",
-  "summary": "Create a new AVm and add to domain.",
+  "summary": "Create a new VM and add to domain.",
   "githubUsername": "gkm2021",
   "dateUpdated": "2022-01-23"
 }
