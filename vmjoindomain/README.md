@@ -9,6 +9,5 @@
 
 
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fgkm2021%2FAzureARMTemplates%2Fmain%2vmjoindomain%2FFazuredeploy.json?token=GHSAT0AAAAAABQ3FKURBXFZDMMA3AHMWI7MYPNAXHQ)
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/gkm2021/AzureARMTemplates/main/vmjoindomain/azuredeploy.json?token=GHSAT0AAAAAABQ3FKUQZR6ZUNJDY6WVO6YKYPNCKDA)
 
-[![Deploy To Azure](https://azuredeploy.net/deploybutton.png)](https://deploy.azure.com/?repository=https://github.com/gkm2021/AzureARMTemplates/vmjoindomain?ptmpl=azuredeploy.parameters.json)
