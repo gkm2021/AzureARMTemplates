@@ -52,6 +52,34 @@
                 "description": "The size of the virtual machines"
             }
         },
+        "imagePublisher": {
+            "type": "string",
+            "defaultValue": "MicrosoftWindowsServer",
+            "metadata":{
+                "description" : "Name of the image publisher"
+            }
+        },
+        "imageOffer": {
+            "type": "string",
+            "defaultValue": "WindowsServer",
+            "metadata":{
+                "description" : "Name ofimage offer"
+            }
+        },
+        "imageSku": {
+            "type": "string",
+            "defaultValue": "2016-Datacenter",
+            "metadata":{
+                "description" : "Name of image SKU"
+            }
+        },
+        "imageVersion": {
+            "type": "string",
+            "defaultValue": "latest",
+            "metadata":{
+                "description" : "Image version"
+            }
+        },       
         "domainToJoin": {
             "type": "string",
             "metadata": {
@@ -123,10 +151,10 @@
     },
     "variables": {
         "storageAccountName": "[concat(uniquestring(resourceGroup().id, deployment().name))]",
-        "imagePublisher": "center-for-internet-security-inc",
-        "imageOffer": "cis-windows-server-2016-v1-0-0-l2",
-        "sku": "cis-ws2016-l2",
-        "version": "1.1.2",
+        "imagePublisher": "[parameters('imagePublisher')]",
+        "imageOffer": "[parameters('imageOffer')]",
+        "sku": "[parameters('imageSku')]",
+        "version": "[parameters('imageVersion')]",       
         "nicName": "[concat(parameters('dnsLabelPrefix'),'Nic')]",
         "publicIPName": "[concat(parameters('dnsLabelPrefix'),'Pip')]",
         "subnetId": "[resourceId(resourceGroup().name, 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVNETName'), parameters('existingSubnetName'))]"
@@ -184,11 +212,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts',variables('storageAccountName'))]",
                 "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
             ],
-            "plan": {
-                "name": "[variables('sku')]",
-                "publisher": "[variables('imagePublisher')]",
-                "product": "[variables('imageOffer')]"
-                },
             "properties": {
                 "hardwareProfile": {
                     "vmSize": "[parameters('vmSize')]"
