@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "joinDomain": {
+            "value": false
+        },
+        "existingVNETName": {
+            "value": ""
+        },
+        "existingSubnetName": {
+            "value": ""
+        },
+        "vmSize": {
+            "value": "Standard_B4ms"
+        },
+        "domainToJoin": {
+            "value": "parnasoftdev.com"
+        },
+        "domainUsername": {
+            "value": "GEN-UNIQUE"
+        },
+        "domainPassword": {
+            "value": "GEN-PASSWORD"
+        },
+        "domainJoinOptions": {
+            "value": 3
+        },
+        "vmAdminUsername": {
+            "value": "localadmin"
+        },
+        "vmAdminPassword": {
+            "value": "GEN-PASSWORD"
+        },
+        "dnsLabelPrefix": {
+            "value": "pstsvr1"
+        },
+        "availSetName": {
+            "value": ""
+        }
+    }
+}
