@@ -1,57 +1,53 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#"
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "location": {
-            "value": "centralindia"
+        "joinDomain": {
+            "value": false
         },
-        "networkInterfaceName": {
-            "value": "test1708"
+        "existingVNETName": {
+            "value": ""
         },
-        "enableAcceleratedNetworking": {
-            "value": true
+        "existingSubnetName": {
+            "value": ""
         },
-        "subnetName": {
-            "value": "adSubnet"
+        "vmSize": {
+            "value": "Standard_B4ms"
         },
-        "virtualNetworkId": {
-            "value": "/subscriptions/c8b41177-1dc8-47eb-af84-9c63b2bd6b71/resourceGroups/parnasoftdev/providers/Microsoft.Network/virtualNetworks/adVNET"
+        "imagePublisher": {
+            "value": "MicrosoftWindowsServer"
         },
-        "publicIpAddressName": {
-            "value": "test1-ip"
+        "imageOffer": {
+            "value": "WindowsServer"
         },
-        "publicIpAddressType": {
-            "value": "Dynamic"
+        "imageSku": {
+            "value": "2016-Datacenter"
         },
-        "publicIpAddressSku": {
-            "value": "Basic"
+        "imageVersion": {
+            "value": "latest"
         },
-        "virtualMachineName": {
-            "value": "test1"
+        "domainToJoin": {
+            "value": "parnasoftdev.com"
         },
-        "virtualMachineComputerName": {
-            "value": "test1"
+        "domainUsername": {
+            "value": "GEN-UNIQUE"
         },
-        "virtualMachineRG": {
-            "value": "parnasoftdev"
+        "domainPassword": {
+            "value": "GEN-PASSWORD"
         },
-        "osDiskType": {
-            "value": "Premium_LRS"
+        "domainJoinOptions": {
+            "value": 3
         },
-        "virtualMachineSize": {
-            "value": "Standard_D2as_v4"
-        },
-        "adminUsername": {
+        "vmAdminUsername": {
             "value": "localadmin"
         },
-        "adminPassword": {
-            "value": null
+        "vmAdminPassword": {
+            "value": "GEN-PASSWORD"
         },
-        "patchMode": {
-            "value": "AutomaticByOS"
+        "dnsLabelPrefix": {
+            "value": "pstsvr1"
         },
-        "enableHotpatching": {
-            "value": false
+        "availSetName": {
+            "value": ""
         }
-    }
-}
+    }}
