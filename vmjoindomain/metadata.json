@@ -1,0 +1,9 @@
+{
+  "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
+  "type": "QuickStart",
+  "itemDisplayName": "Create new Active Directory forest with optional subdomain",
+  "description": "This template creates a new virtual machine, and adds it to an existing domain.",
+  "summary": "Create a new AVm and add to domain.",
+  "githubUsername": "gkm2021",
+  "dateUpdated": "2022-01-23"
+}
