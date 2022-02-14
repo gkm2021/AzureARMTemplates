@@ -1,0 +1,24 @@
+1.  Install latest Powershell (7.x).  Powershell 7.x and Windows Powershell 5.1 can coexist on the same machine. The 
+https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2#msi
+In Windows PowerShell, the PowerShell executable is named powershell.exe. In version 6 and above, the executable is named pwsh.exe.
+
+
+
+2. Install the Azure Az PowerShell module
+	- Make sure you have athe latest Powershell version
+			$PSVersionTable.PSVersion
+	- Set the PowerShell script execution policy to remote signed or less restrictive.
+		use Get-ExecutionPolicy to determine the current execution policy.
+		Then set the execution policy for the current user 
+			Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+	- Install Az PowerShell module for the current user using 
+			Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+	
+	To start working with Az PowerShell, sign in to Azure using
+		Connect-AzAccount
+	
+	Here is the reference - https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-7.2.0
+
+3.  Install Visual Studio Code.
+
+4.  Download the aduser folder from Github
