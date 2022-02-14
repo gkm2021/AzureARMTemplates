@@ -1,4 +1,4 @@
-# Create domain userst in Domain Controller
+# Create AD users in Domain Controller
 
 Click the button below to deploy a forest to Azure. 
 
