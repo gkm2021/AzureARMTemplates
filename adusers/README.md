@@ -1,4 +1,4 @@
-# Create an Active Directory forest with 1 or 2 domains, each with 1 or 2 DCs
+# Create domain userst in Domain Controller
 
 Click the button below to deploy a forest to Azure. 
 
