@@ -1,0 +1,9 @@
+{
+    "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
+    "type": "SubscriptionDeployment",
+    "itemDisplayName": "Add Users Template",
+    "description": "Add Users to Windows AD in Azure",
+    "summary": "Add Users to Windows AD in Azure",
+    "githubUsername": "gkm2021",
+    "dateUpdated": "2022-01-20"
+  }

@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "value": "rootdc1"
+        },
+        "scriptFileName": {
+            "value": "createupdateusers.ps1"
+        },
+        "sasToken":{"value":"?sv=2019-02-02&sr=c&sig=BzxlKPLNxiYnU7n3FpnX7hS6VMfETHuGEelq3c52cRY%3D&se=2019-11-26T14%3A24%3A41Z&sp=rw"}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
