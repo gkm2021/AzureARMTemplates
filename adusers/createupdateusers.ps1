@@ -21,18 +21,6 @@ Function AddADUser {
            [ValidateNotNullorEmpty()]
            [string]$Lastname,
    
-#           [Parameter(Mandatory=$True)]
-#           [ValidateNotNullorEmpty()]
-#           [ValidateScript({
-#               if ($_ -match '[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?' ) {
-#                   $True
-#               }
-#               else {
-#                   Throw [System.Management.Automation.ValidationMetadataException] "The value '${_}' for parameter Office is not a valid management server. The value should be of the form xyz.abc.com"
-#               }                
-#           })]
-#           [string]$Office,
-   
            [Parameter(Mandatory=$True)]
            [ValidateNotNullorEmpty()]
            [string]$OU
@@ -43,7 +31,6 @@ Function AddADUser {
            -Name "$Firstname $Lastname" `
            -GivenName $Firstname `
            -Surname $Lastname `
-#           -Office $Office `
            -Enabled $True `
            -ChangePasswordAtLogon $False `
            -DisplayName "$Lastname, $Firstname" `
@@ -75,10 +62,6 @@ Function AddADUser {
            [ValidateNotNullorEmpty()]
            [string]$Lastname,
    
-#           [Parameter(Mandatory=$True)]
-#           [ValidateNotNullorEmpty()]
-#           [string]$Office,
-   
            [Parameter(Mandatory=$True)]
            [ValidateNotNullorEmpty()]
            [string]$OU
@@ -88,7 +71,6 @@ Function AddADUser {
            -UserPrincipalName "$Username@$Domain" `
            -GivenName $Firstname `
            -Surname $Lastname `
-#           -Office $Office `
            -Enabled $True `
            -ChangePasswordAtLogon $False `
            -DisplayName "$Lastname, $Firstname"
@@ -107,7 +89,6 @@ Function AddADUser {
           $Password = ConvertTo-SecureString -String $User.password -AsPlainText -Force
           $Firstname = $User.firstname
           $Lastname = $User.lastname
-#          $Office = $USer.office
           $OU = $User.ou
    
           #Check if the user account already exists in AD
@@ -123,7 +104,6 @@ Function AddADUser {
                    -Password $Password `
                    -Firstname $Firstname `
                    -Lastname $Lastname `
-#                   -Office $Office `
                    -OU $OU
           }
           else
@@ -136,7 +116,6 @@ Function AddADUser {
                    -Password $Password `
                    -Firstname $Firstname `
                    -Lastname $Lastname `
-#                   -Office $Office `
                    -OU $OU
           }
    }

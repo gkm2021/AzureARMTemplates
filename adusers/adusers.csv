@@ -1,5 +1,4 @@
 firstname, lastname, username, domain, password, ou
 Raju, Rastogi, rrastogi, parnasoftdev.com, Testing1@34567, "CN=Users, DC=parnasoftdev,DC=com"
 Ranchoddas shamaldas, Chanchad, rschanchad, parnasoftdev.com, Testing1@34567, "CN=Users, DC=parnasoftdev,DC=com"
-viru, Sahastrabuddhe, vsahastrabuddhe, parnasoftdev.com, Testing1@34567, "CN=Users, DC=netaphordev,DC=com"
 Phunsukh, Wangdu, phwangdu, parnasoftdev.com, Testing1@34567, "CN=Users, DC=parnasoftdev,DC=com"

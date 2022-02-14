@@ -26,14 +26,14 @@
 
 param(
     [switch] $uploadscripts=$True,
-    $subscriptionId="a8b79ff4-95ba-4613-968a-c2db56b024b5",
-    $resourceGroupName ="cisfedrampdevrg",
-    $resourceGroupLocation = "eastus",
-    $vmName = "cisrootdc1",
+    $subscriptionId="c8b41177-1dc8-47eb-af84-9c63b2bd6b71",
+    $resourceGroupName ="parnasoftdevRG",
+    $resourceGroupLocation = "centralindia",
+    $vmName = "rootdc1",
     [Parameter(Mandatory=$True)]
     [string]$deploymentName,
-    $templateFile = "template.json",
-    $parametersFile = "parameters.json",
+    $templateFile = "azuredeploy.json",
+    $parametersFile = "azuredeploy.parameters.json",
     $logfile="c:\temp\log.txt"
 )
 
@@ -93,7 +93,7 @@ else {
 }
 
 #get asset location and Sas Token for asset location
-$storageAccountName = $resourceGroupName + "store"
+$storageAccountName = $resourceGroupName.ToLower() + "store"
 Set-AzCurrentStorageAccount -ResourceGroupName $resourceGroupName -Name $storageAccountName
 
 $context = $storageAccount.Context
@@ -125,6 +125,6 @@ if(Test-Path $parametersFilePath) {
     New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -Name $deploymentName -TemplateUri ($templateUrl + $sasToken) -sasToken $sasToken -TemplateParameterUri ($parameterUrl + $sasToken);
     #Test-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateUri ($templateUrl + $sasToken) -sasToken $sasToken -TemplateParameterUri ($parameterUrl + $sasToken);
 } else { 
-    New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -Name $deploymentName -TemplateUri ($templateUrl + $sasToken) -artifactsLocationSasToken $sasToken;
+    New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -Name $deploymentName -TemplateUri $templateUrl -artifactsLocationSasToken $sasToken;
 }
 Get-AzVM -ResourceGroupName $resourceGroupName -Name $vmName -Status | Out-File $logfile

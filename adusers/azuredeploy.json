@@ -25,13 +25,14 @@
     "resources": [{
         "type": "Microsoft.Compute/virtualMachines/extensions",
         "name": "[concat(parameters('vmName'),'/CustomScriptExtension')]",
-        "apiVersion": "2019-03-01",
+        "apiVersion": "2018-06-01",
         "location": "[parameters('location')]",
         "properties": {
             "publisher": "Microsoft.Compute",
             "type": "CustomScriptExtension",
-            "typeHandlerVersion": "1.10.12",
+            "typeHandlerVersion": "1.9",
             "autoUpgradeMinorVersion": true,
+            "protectedSettings": {},
             "settings": {
                 "fileUris": [
                     "[concat(variables('_artifactsLocation'), '/', parameters('ScriptFileName'), parameters('sasToken'))]",
