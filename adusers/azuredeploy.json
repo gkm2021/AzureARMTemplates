@@ -30,7 +30,7 @@
         "properties": {
             "publisher": "Microsoft.Compute",
             "type": "CustomScriptExtension",
-            "typeHandlerVersion": "1.9",
+            "typeHandlerVersion": "1.10.12",
             "autoUpgradeMinorVersion": true,
             "settings": {
                 "fileUris": [
